@@ -1,4 +1,4 @@
-# Social Engineering Using Hidden Macros In Excel
+# Social Engineering Using "Hidden" Macros In Excel
 
 NOTE: This method is detectable if the analysis or victim has any technical knowledge of macros. Simply running a tool such as oledump or olevba against the document will return the macros, though they won't immediately reveal any of the real activity.
 
