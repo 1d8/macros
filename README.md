@@ -1,5 +1,7 @@
 # Social Engineering Using "Hidden" Macros In Excel
 
+You may ask why not simply use code that doesn't actually touch the workbook and the main reason why is to avoid network traffic. And of course you can simply add macros that will add each line of code into a new file to avoid network traffic but doing so would make the activity obvious to anyone analyzing the document, they will immediately see that the new lines of code upon looking at the macros. With this method, it makes an analysis of the malicious document slightly harder, but not by much of course.
+
 NOTE: Simply running a tool such as oledump or olevba against the document will return the macros.
 
 All that will be shown is that the macro is extracting code from a specific column & executing it using Shell(), which is admittedly still suspicious:
