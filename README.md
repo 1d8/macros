@@ -1,8 +1,8 @@
 # Social Engineering Using "Hidden" Macros In Excel
 
-NOTE: This method is detectable if the analysis or victim has any technical knowledge of macros. Simply running a tool such as oledump or olevba against the document will return the macros, though they won't immediately reveal any of the real activity.
+NOTE: Simply running a tool such as oledump or olevba against the document will return the macros.
 
-All that will be shown is that the macros are extracting code from a specific column & executing it using Shell(), which is admittedly still suspicious:
+All that will be shown is that the macro is extracting code from a specific column & executing it using Shell(), which is admittedly still suspicious:
 
 ![](/imgs/img1.png)
 
@@ -10,15 +10,15 @@ And if we navigate to BG1 which is where the code appears to be, we don't immedi
 
 ![](/imgs/img2.png)
 
-But if you hover your mouse over BG1 (or simply look a little more closely & notice the misaligned columns), then you'll see that there's an image overlaying the code:
+But if you hover your mouse over BG1 (or simply look a little more closely & notice the misaligned columns) then you'll see that there's an image overlaying the code:
 
 ![](/imgs/img3.png)
 
 ![](/imgs/img4.png)
 
-Obviously, someone with a bit more patience could perfect the screenshot of the empty columns & overlay it on top of the code to make it less noticable.
+Obviously someone with a bit more patience could perfect the screenshot of the empty columns & overlay it on top of the code to make it less noticable.
 
-But then again, there's always the method of using `MsgBox` to reveal the code that is being extracted:
+Another way to reveal the code being extracted from the worksheet is by using `MsgBox`:
 
 ![](/imgs/img5.png)
 
